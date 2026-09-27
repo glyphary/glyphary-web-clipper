@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": ".test-dist",
+    "module": "ES2020",
+    "types": []
+  },
+  "include": ["src/clipping.ts", "src/categories.ts"]
+}

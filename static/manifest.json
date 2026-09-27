@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Glyphary Web Clipper",
+  "version": "0.1.0",
+  "description": "Save the readable article on the current page, or your selection, as a Markdown note in your Glyphary vault.",
+  "minimum_chrome_version": "122",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_title": "Clip to Glyphary",
+    "default_popup": "popup.html",
+    "default_icon": { "32": "icons/32.png", "128": "icons/128.png" }
+  },
+  "icons": { "32": "icons/32.png", "128": "icons/128.png" },
+  "options_page": "options.html",
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+G" },
+      "description": "Clip to Glyphary"
+    }
+  }
+}

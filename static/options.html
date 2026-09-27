@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Glyphary Web Clipper</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<main class="popup options">
+  <h1>Glyphary Web Clipper</h1>
+  <p>Clips are written to <code>Clippings/</code> inside the vault folder you choose. Glyphary opens the new note when it is running.</p>
+  <p id="vault-name" class="muted"></p>
+  <div class="actions">
+    <button id="choose-vault" type="button">Choose vault folder</button>
+  </div>
+  <p id="status" class="muted" role="status"></p>
+</main>
+<script type="module" src="options.js"></script>
+</body>
+</html>

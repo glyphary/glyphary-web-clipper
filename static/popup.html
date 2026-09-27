@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Clip to Glyphary</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<main class="popup">
+  <h1 id="page-title">Clip to Glyphary</h1>
+  <p id="vault-name" class="muted"></p>
+  <div class="actions">
+    <button id="choose-vault" type="button" hidden>Choose vault folder</button>
+  </div>
+  <div id="clip-form" hidden>
+    <label class="field">
+      <span>Category</span>
+      <span class="row">
+        <select id="category" aria-label="Category"></select>
+        <button id="remove-category" class="icon" type="button" title="Forget this category (notes stay)" aria-label="Forget this category">−</button>
+      </span>
+    </label>
+    <div id="new-category" class="new-category" hidden>
+      <label class="field">
+        <span>Name</span>
+        <input id="new-category-name" type="text" placeholder="Research" spellcheck="false">
+      </label>
+      <label class="field">
+        <span>Folder in vault</span>
+        <input id="new-category-location" type="text" placeholder="Research/Web" spellcheck="false">
+      </label>
+      <div class="actions">
+        <button id="save-category" type="button">Save category</button>
+        <button id="cancel-category" type="button">Cancel</button>
+      </div>
+    </div>
+    <label class="field">
+      <span>Tags</span>
+      <input id="tags" type="text" placeholder="reading, ai" spellcheck="false">
+    </label>
+    <label class="check">
+      <input id="open-in-app" type="checkbox" checked>
+      <span>Open in Glyphary after saving</span>
+    </label>
+    <div class="actions">
+      <button id="clip-page" type="button">Clip page</button>
+      <button id="clip-selection" type="button" hidden>Clip selection</button>
+    </div>
+  </div>
+  <p id="status" class="muted" role="status"></p>
+</main>
+<script type="module" src="popup.js"></script>
+</body>
+</html>

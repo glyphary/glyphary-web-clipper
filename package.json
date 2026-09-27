@@ -1,0 +1,21 @@
+{
+  "name": "glyphary-web-clipper",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Browser extension that clips the current page into a Glyphary vault as a Markdown note.",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "rm -rf .test-dist && tsc -p tsconfig.test.json && node --test test/*.test.mjs",
+    "package": "npm run build && cd dist && zip -qr ../glyphary-web-clipper.zip .",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "defuddle": "^0.6.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.4",
+    "typescript": "^5.8.0",
+    "@types/chrome": "^0.0.300"
+  }
+}

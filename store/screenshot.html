@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Glyphary Web Clipper screenshot</title>
+<link rel="stylesheet" href="../static/popup.css">
+<style>
+  /* A 640x400 store screenshot: a page excerpt behind the open popup. */
+  html, body { width: 640px; height: 400px; overflow: hidden; }
+  body { position: relative; background: #ece8df; }
+  .page {
+    position: absolute; inset: 0; padding: 26px 32px; box-sizing: border-box;
+    color: #2b2d29; font: 14px/1.5 Georgia, "Times New Roman", serif;
+    background: linear-gradient(180deg, #f6f3ec, #ece8df);
+  }
+  .page .site { font: 600 11px/1 -apple-system, system-ui, sans-serif; letter-spacing: .08em; color: #8a8e86; text-transform: uppercase; }
+  .page h2 { margin: 10px 0 8px; font-size: 22px; line-height: 1.2; }
+  .page p { margin: 0 0 8px; max-width: 330px; }
+  .page mark { background: #d9e6f2; color: inherit; }
+  .popup {
+    position: absolute; top: 24px; right: 32px;
+    border: 1px solid var(--border); border-radius: 10px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, .18);
+    background: var(--surface);
+  }
+  .toolbar {
+    position: absolute; top: 0; left: 0; right: 0; height: 14px;
+    background: #dcd7cc;
+  }
+  .toolbar .pin { position: absolute; top: 3px; right: 44px; width: 8px; height: 8px; border-radius: 2px; background: #4a6b8a; }
+</style>
+</head>
+<body>
+<div class="toolbar"><span class="pin"></span></div>
+<div class="page">
+  <div class="site">Example Journal</div>
+  <h2>Why Notes Rot: A Field Guide</h2>
+  <p>Notes rot when nobody revisits them. A note that is never read again is a
+  note that was written for the act of writing, which is fine, but it is not
+  knowledge.</p>
+  <p><mark>The cure is not more notes. It is fewer, revisited on purpose, with
+  the source one click away.</mark></p>
+  <p>That is the whole argument. The rest of this piece is examples.</p>
+</div>
+<main class="popup">
+  <h1 id="page-title">Why Notes Rot: A Field Guide</h1>
+  <p class="muted">Vault: Research</p>
+  <div>
+    <label class="field">
+      <span>Category</span>
+      <span class="row">
+        <select aria-label="Category">
+          <option>Clippings (Clippings/)</option>
+          <option selected>Reading (Reading/Web/)</option>
+          <option>New category...</option>
+        </select>
+        <button class="icon" type="button" aria-label="Forget this category">−</button>
+      </span>
+    </label>
+    <label class="field">
+      <span>Tags</span>
+      <input type="text" value="notes, writing">
+    </label>
+    <label class="check">
+      <input type="checkbox" checked>
+      <span>Open in Glyphary after saving</span>
+    </label>
+    <div class="actions">
+      <button type="button">Clip page</button>
+      <button type="button">Clip selection</button>
+    </div>
+  </div>
+  <p class="muted" role="status">Saved Reading/Web/Why Notes Rot- A Field Guide.md</p>
+</main>
+</body>
+</html>
